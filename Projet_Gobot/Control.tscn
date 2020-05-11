@@ -1,0 +1,418 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://mixer-fader-knob.svg" type="Texture" id=2]
+[ext_resource path="res://down.png" type="Texture" id=3]
+[ext_resource path="res://up.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+process_priority = -1
+process_mode = 0
+wait_time = 0.001
+autostart = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+use_threads = true
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+tab_align = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Console" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+drag_to_rearrange_enabled = true
+
+[node name="VSlider" type="VSlider" parent="TabContainer/Console"]
+margin_left = 100.0
+margin_top = 50.892
+margin_right = 169.097
+margin_bottom = 510.892
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider"]
+margin_left = -9.3712
+margin_top = -50.0
+margin_right = 76.6288
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider"]
+margin_top = 469.0
+margin_right = 64.0
+margin_bottom = 493.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider2" type="VSlider" parent="TabContainer/Console"]
+margin_left = 176.629
+margin_top = 50.0
+margin_right = 252.728
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider2"]
+margin_left = -4.10805
+margin_top = -50.0
+margin_right = 81.892
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider2"]
+margin_left = 3.0
+margin_top = 470.0
+margin_right = 67.0
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider3" type="VSlider" parent="TabContainer/Console"]
+margin_left = 264.0
+margin_top = 50.0
+margin_right = 340.0
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider3"]
+margin_left = -5.31802
+margin_top = -50.0
+margin_right = 80.6819
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider3"]
+margin_left = 4.0
+margin_top = 470.0
+margin_right = 68.0
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider4" type="VSlider" parent="TabContainer/Console"]
+margin_left = 353.0
+margin_top = 50.0
+margin_right = 426.0
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider4"]
+margin_left = -5.00001
+margin_top = -48.0
+margin_right = 81.0
+margin_bottom = 2.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider4"]
+margin_left = 3.0
+margin_top = 470.0
+margin_right = 65.0
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider5" type="VSlider" parent="TabContainer/Console"]
+margin_left = 440.0
+margin_top = 50.0
+margin_right = 510.0
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider5"]
+margin_left = -4.0
+margin_top = -48.0
+margin_right = 82.0
+margin_bottom = 2.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider5"]
+margin_left = 4.0
+margin_top = 470.0
+margin_right = 66.0
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider6" type="VSlider" parent="TabContainer/Console"]
+margin_left = 520.0
+margin_top = 50.0
+margin_right = 604.0
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider6"]
+margin_top = -48.0
+margin_right = 86.0
+margin_bottom = 2.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider6"]
+margin_left = 12.0
+margin_top = 470.0
+margin_right = 74.0
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider7" type="VSlider" parent="TabContainer/Console"]
+margin_left = 608.79
+margin_top = 50.0
+margin_right = 701.79
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider7"]
+margin_left = 3.21004
+margin_top = -49.108
+margin_right = 89.2101
+margin_bottom = 0.891998
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider7"]
+margin_left = 11.21
+margin_top = 470.0
+margin_right = 75.21
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider8" type="VSlider" parent="TabContainer/Console"]
+margin_left = 704.79
+margin_top = 50.0
+margin_right = 784.79
+margin_bottom = 510.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/VSlider8"]
+margin_left = -3.0
+margin_top = -48.0
+margin_right = 83.0
+margin_bottom = 2.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/VSlider8"]
+margin_left = 11.21
+margin_top = 470.0
+margin_right = 75.21
+margin_bottom = 494.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="VSlider" parent="TabContainer/Console"]
+margin_left = 881.0
+margin_top = 48.0
+margin_right = 954.0
+margin_bottom = 508.0
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+max_value = 255.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Console/Master"]
+margin_left = -5.00001
+margin_top = -50.0
+margin_right = 80.9998
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Console/Master"]
+margin_top = 472.0
+margin_right = 67.0
+margin_bottom = 496.0
+align = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Page_Down" type="Button" parent="TabContainer/Console"]
+margin_left = 20.0
+margin_top = 192.0
+margin_right = 96.0
+margin_bottom = 262.0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Page_Up" type="Button" parent="TabContainer/Console"]
+margin_left = 796.0
+margin_top = 192.0
+margin_right = 872.0
+margin_bottom = 262.0
+icon = ExtResource( 4 )
+flat = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Equipements" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+[connection signal="value_changed" from="TabContainer/Console/VSlider" to="." method="_on_VSlider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider2" to="." method="_on_VSlider2_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider3" to="." method="_on_VSlider3_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider4" to="." method="_on_VSlider4_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider5" to="." method="_on_VSlider5_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider6" to="." method="_on_VSlider6_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider7" to="." method="_on_VSlider7_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/VSlider8" to="." method="_on_VSlider8_value_changed"]
+[connection signal="value_changed" from="TabContainer/Console/Master" to="." method="_on_Master_value_changed"]
+[connection signal="pressed" from="TabContainer/Console/Page_Down" to="." method="_on_Page_Down_pressed"]
+[connection signal="pressed" from="TabContainer/Console/Page_Up" to="." method="_on_Page_Up_pressed"]
